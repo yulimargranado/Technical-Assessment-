@@ -5,9 +5,9 @@
   <title>Kushki Kajita Demo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Kushki Checkout Script (desde CDN) -->
+  <!-- Kushki Checkout Script (desde CDN) 
   <script src="https://cdn.kushkipagos.com/kushki-checkout.js"></script>
-
+  -->
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -44,18 +44,18 @@
   </div>
 
   <!-- Script de integración de la Kajita (desde consola UAT) -->
-<script type="text/javascript">
-var kushki = new KushkiCheckout({
-    kformId: "wIldXT3c8",
-    form: "my-form",
-    publicMerchantId: "{1275027bcf63477eb4af482c9b975982}",// Reemplaza esto por tucredencial pública
-    inTestEnvironment: true,
-    amount: {
-     subtotalIva: 0,
-     iva: 0,
-     subtotalIva0: 1000,
-     }
-    });
-</script>
+  <script type="text/javascript">
+  var kushki = new KushkiCheckout({
+      kformId: "RI30XhxnZ",
+      form: "my-form",
+      publicMerchantId: "669195715b124055b5131021de9c7167",// Reemplaza esto por tucredencial pública
+      inTestEnvironment: true,
+      amount: {
+       subtotalIva: 0,
+       iva: 0,
+       subtotalIva0: 1000,
+       }
+      });
+  </script>
 </body>
 </html>
