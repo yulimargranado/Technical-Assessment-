@@ -35,12 +35,10 @@
 
     <!-- Formulario de prueba -->
     <form 
-      action="https://webhook.site/TU_CALLBACK_URL" 
+      action=”https://webhook.site/38c446ec-66ed-4fcc-95dc-57bc566496d7”
       method="post" 
       id="my-form">
       
-      <!-- Aquí Kajita insertará los campos dinámicamente -->
-
       <input type="hidden" name="cart_id" value="12345" />
     </form>
   </div>
@@ -48,16 +46,14 @@
   <!-- Script de integración de la Kajita (desde consola UAT) -->
   <script>
     var kushki = new KushkiCheckout({
-      kformId: "TU_KFORM_ID",             // ID de la Kajita (lo obtienes de UAT console)
+      kformId: "RI30XhxnZ",             // ID de la Kajita (UAT console)
       form: "my-form",                   // El ID del <form>
-      publicMerchantId: "TU_PUBLIC_KEY", // Merchant ID (UAT)
+      publicMerchantId: "${669195715b124055b5131021de9c7167}", // Merchant ID (UAT)
       amount: {
         subtotalIva: 0,
         iva: 0,
-        subtotalIva0: 1000,              // Monto de la transacción
-        currency: "USD"                  // Ajusta según país
+        subtotalIva0: 1000,              // Monto de la transacción               
       },
-      paymentMethods: ["card", "transfer", "cash", "payout"]
     });
   </script>
 </body>
