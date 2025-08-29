@@ -58,6 +58,29 @@
             currency: "COP"  // Moneda Branch Colombia
             //totalAmount: 1000,
         }
+     });
+        // Intercepta submit para pedir token antes de enviar al servidor
+     document.getElementById('my-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        // requestToken (callback recibe response)
+        kushki.requestToken(function(response) {
+          // response ejemplo: { token: "...", status: "SUCCESS" } o { message: "...", status: "ERROR" }
+          if (response && response.token) {
+            // inject token hidden field and submit
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'token';
+            input.value = response.token;
+            document.getElementById('my-form').appendChild(input);
+            // submit real
+            document.getElementById('my-form').submit();
+          } else {
+            // mostrar error al usuario
+            var msg = (response && response.message) ? response.message : 'No se pudo obtener token';
+            alert('Error al tokenizar: ' + msg);
+            console.error('Kushki token error', response);
+          }
+        });
     });
   </script>
 </body>
