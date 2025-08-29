@@ -80,10 +80,10 @@ Ruta: Configuración → Integraciones → Kajita → Crear nuevo formulario
 
 La etapa II consistió en consumir los endpoints de cargos, anulaciones y consultas de Kushki usando Postman, a partir del token generado en la etapa 1 donde se simulo un pago con Kajita.
 
-Toda la evidencia se encuentra: 
+- Toda la evidencia se encuentra: 
 
-- Documentación: docs/PROCESSING_API.md
-- Requests/responses: postman/
+   Documentación: docs/PROCESSING_API.md
+   Requests/responses: postman/
 
 
 - Herramienta: Postman (colección incluida en /postman/").
