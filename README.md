@@ -33,43 +33,45 @@ Se creó una cuenta en el ambiente UAT de Kushki, se configuró una Kajita de Pa
 ---
 
 ### 2. Validar roles/permisos
-- Se confirmó que el usuario tiene rol **Usuario Maestro**.  
+- Se confirmó que el usuario tiene rol Usuario Maestro.  
 - Este rol es necesario para poder crear Kajitas.
 
-📸 **Evidencia:** `screenshots/roles.png`
+<img width="948" height="453" alt="image" src="https://github.com/user-attachments/assets/f5fc7170-20a0-4b60-a9e5-1f7d69dd5507" />
 
 ---
 
 ### 3. Crear Kajita desde la consola
-Ruta: **Configuración → Integraciones → Kajita → Crear nuevo formulario**  
+Ruta: Configuración → Integraciones → Kajita → Crear nuevo formulario  
 - Tipo: Pago Único.  
-- Alias: `kajita-uat-prueba-Yuli`.  
-- Métodos de pago habilitados: tarjetas.  
-- Campos activados: nombre, email, número de tarjeta, fecha, CVV.  
-- Configuración de idioma y moneda en **USD**.
-
-📸 **Evidencia:** `screenshots/kajita_create.png`
+- Alias: "Technical Assessment".  
+- Métodos de pago habilitados: tarjetas.
+  - Se configuraron otros métodos de pago, pero para efecto de la prueba solo se trabajo con tarjetas.
+- Campos activados: nombre y apellido, número de tarjeta, fecha de vencimiento, CVV, dirección de facturacción, teléfono,  email.
+- Cambios de estilo:
+  -  horientación - vertical.
+  -  Detección automática de modo noche.
+  -  Plantillas - underline.
+  -  Colores del formulario - Color primario #6D96A4 - Color secundario #E7E9F2 - Errores #E24763.
+  -  Forma del botón - redondo.
+- Configuración de idioma en español y moneda en COP.
+- Se incorporo la url para la recepción de token (Servidor publico)
+  
+<img width="458" height="791" alt="image" src="https://github.com/user-attachments/assets/043d4330-58bb-4eed-acc6-0e4e34a026b3" />
 
 ---
 
 ### 4. Embedding local de la Kajita
 - Se generó el script de integración desde la consola.
-- Se creó un archivo `index.html` con el snippet:
+- Se creó un archivo "index.html" con el snippet, scripts, y estructura html.
+  
+<img width="482" height="870" alt="7" src="https://github.com/user-attachments/assets/1fe8b032-36a9-42d6-8385-edeb79782e3c" />
 
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Kajita UAT Test</title>
-</head>
-<body>
-  <div id="kajita-container"></div>
-  <!-- Script provisto por la consola UAT -->
-  <script src="https://uat.kushkipagos.com/kajita.js"
-          kushki-key="PUBLIC_KEY_REDACTED"
-          kushki-merchant-id="MERCHANT_ID_REDACTED"
-          data-form="kajita-uat-prueba-Yuli">
-  </script>
-</body>
-</html>
+---
+
+### 4. Pruebas
+- Se utilizo el hosting publico y servidor para recepción de token 
+- Se usaron datos de tarjetas proporcionados en la documentación para simular el pago. 
+
+<img width="1918" height="812" alt="9" src="https://github.com/user-attachments/assets/14eda954-d96a-4849-9373-bc309cd93b84" />
+
+
