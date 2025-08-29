@@ -1,0 +1,21 @@
+# Etapa II — Procesamiento API
+
+Este documento detalla el proceso realizado en Postman para la etapa de Procesamiento API de la prueba técnica.  
+
+En la Etapa I (tokenización) ya fue completada y documentada en el `README.md`. En esta etapa se usó el token obtenido para ejecutar cargos, anulaciones y consultas de transacciones.
+
+---
+
+### 🔧 Pre-requisitos
+- Credenciales UAT (Public y Private Merchant IDs, Private Credential ID).
+- Token de tarjeta generado en la etapa I (almacenado como "{{CARD_TOKEN}}" en Postman).
+- Postman con entorno configurado (`postman/Kushki.env.json`).
+- Variables de entorno recomendadas:
+
+```json
+BASE_URL = https://api-uat.kushkipagos.com
+PRIVATE_MERCHANT_ID = {{PRIVATE_MERCHANT_ID}}
+PRIVATE_CREDENTIAL_ID = {{PRIVATE_CREDENTIAL_ID}}
+CARD_TOKEN = {{CARD_TOKEN}}
+CURRENCY = CLP
+SUBTOTAL = 1000
