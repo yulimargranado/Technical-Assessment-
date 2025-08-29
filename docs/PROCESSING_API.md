@@ -12,14 +12,14 @@ En la Etapa I (tokenización) ya fue completada y documentada en el `README.md`.
 - Postman con entorno configurado (postman/Kushki.env.json).
 - Variables de entorno recomendadas:
 
-**json
+**json**
 BASE_URL = https://api-uat.kushkipagos.com
 PRIVATE_MERCHANT_ID = {{PRIVATE_MERCHANT_ID}}
 PRIVATE_CREDENTIAL_ID = {{PRIVATE_CREDENTIAL_ID}}
 CARD_TOKEN = {{CARD_TOKEN}}
 CURRENCY = CLP
 SUBTOTAL = 1000
-**
+
 ---
 ## Pasos realizados
 - Se crea el workspace en Postman: postman/Kushki.postman_collection.json
@@ -130,4 +130,5 @@ curl --location --request GET 'https://api-uat.kushkipagos.com/analytics/v2/tran
 }'
 
 Evidencia: postman/responses/transactions_list.json
+
 
