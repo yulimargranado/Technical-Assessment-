@@ -27,6 +27,7 @@ Se creó una cuenta en el ambiente UAT de Kushki, se configuró una Kajita de Pa
 - Correo validado para habilitar acceso.
 - Cambio de contraseña requerido. 
 
+<img width="1130" height="805" alt="image" src="https://github.com/user-attachments/assets/0b92bee0-8d61-43a2-b696-c2383ec11a19" />
 
 
 ---
