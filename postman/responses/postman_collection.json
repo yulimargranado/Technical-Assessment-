@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "d93392e8-6f95-4c2d-969b-b4c5f23f8bb4",
+		"name": "Contract Testing",
+		"description": "# About this collection\n\nThis collection helps you set up contract tests to ensure that two separate systems are compatible and can communicate with one another.\n\n## **Using the collection**\n\n**Step 1:** Send the sample requests and view the response and test results.\n\n**Step 2:** Replace the sample request URLs with your desired API endpoints.\n\n**Step 3:** Customize the tests in the \"Tests\" tab if needed. Don't forget to save your changes.\n\n### Resources\n\n[Scripting in Postman](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/)\n\n[Test script examples](https://learning.postman.com/docs/writing-scripts/script-references/test-examples/)\n\n[Postman Sandbox API reference](https://learning.postman.com/docs/sending-requests/grpc/postman-sandbox-api/#writing-assertions)\n\n[Using the Collection Runner](https://learning.postman.com/docs/collections/running-collections/intro-to-collection-runs/)\n\n[  \n](https://postman.postman.co/documentation/24552533-5bead607-0197-4e1d-87d4-3160bc7631c1?entity=&branch=&version=)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9013607"
+	},
+	"item": [
+		{
+			"name": "charges",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Private-Merchant-Id",
+						"value": "2baadccc013e448cbb10487f92a18818",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"token\": \"fce70e0cd98b4df981863d93c3e7db2a\",\r\n  \"amount\": {\r\n    \"subtotalIva\": 0,\r\n    \"iva\": 0,\r\n    \"subtotalIva0\": 1000,\r\n    \"currency\": \"COP\"\r\n  },\r\n  \"fullResponse\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-uat.kushkipagos.com/card/v1/charges",
+					"protocol": "https",
+					"host": [
+						"api-uat",
+						"kushkipagos",
+						"com"
+					],
+					"path": [
+						"card",
+						"v1",
+						"charges"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "void",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Private-Merchant-Id",
+						"value": "2baadccc013e448cbb10487f92a18818",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"fullResponse\": true }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-uat.kushkipagos.com/v1/charges/283205363154553777",
+					"protocol": "https",
+					"host": [
+						"api-uat",
+						"kushkipagos",
+						"com"
+					],
+					"path": [
+						"v1",
+						"charges",
+						"283205363154553777"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Private-Merchant-Id",
+						"value": "2baadccc013e448cbb10487f92a18818",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Private-Merchant-Id",
+						"value": "20000000104084400000",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Private-Credential-Id",
+						"value": "2039b24f235745cdb82ee05d89dfb315",
+						"type": "text"
+					},
+					{
+						"key": "customerMerchantId",
+						"value": "20000000105754755000",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"page\": 1,\r\n  \"size\": 10,\r\n  \"filters\": {\r\n    \"transaction_reference\": \"283205363154553777\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-uat.kushkipagos.com/analytics/v2/transactions-list",
+					"protocol": "https",
+					"host": [
+						"api-uat",
+						"kushkipagos",
+						"com"
+					],
+					"path": [
+						"analytics",
+						"v2",
+						"transactions-list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Transactions List",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Private-Merchant-Id",
+								"value": "2baadccc013e448cbb10487f92a18818",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Private-Merchant-Id",
+								"value": "20000000104084400000",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Private-Credential-Id",
+								"value": "2039b24f235745cdb82ee05d89dfb315",
+								"type": "text"
+							},
+							{
+								"key": "customerMerchantId",
+								"value": "20000000105754755000",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"page\": 1,\r\n  \"size\": 10,\r\n  \"filters\": {\r\n    \"transaction_reference\": \"283205363154553777\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api-uat.kushkipagos.com/analytics/v2/transactions-list",
+							"protocol": "https",
+							"host": [
+								"api-uat",
+								"kushkipagos",
+								"com"
+							],
+							"path": [
+								"analytics",
+								"v2",
+								"transactions-list"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 29 Aug 2025 16:29:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "x-cache",
+							"value": "Error from cloudfront"
+						},
+						{
+							"key": "via",
+							"value": "1.1 8b130a1488d53626d2fd075757d55034.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "x-amz-cf-pop",
+							"value": "MIA3-C2"
+						},
+						{
+							"key": "x-amz-cf-id",
+							"value": "yodmcK4HTpE6Jab6kf5xiFQdIGf3vJRzDfGQ8oIRWKtIY0ZR_nhwkg=="
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "976d6dd36ceac873-MIA"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "https://api-uat.kushkipagos.com/v1/transactions",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Private-Merchant-Id",
+						"value": "669195715b124055b5131021de9c7167",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"page\": 1,\r\n  \"size\": 10,\r\n  \"filters\": {\r\n    \"start_date\": \"2024-01-01\",\r\n    \"end_date\": \"2025-08-29\",\r\n    \"ticketNumber\": \"283205363154553777\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-uat.kushkipagos.com/v1/transactions",
+					"protocol": "https",
+					"host": [
+						"api-uat",
+						"kushkipagos",
+						"com"
+					],
+					"path": [
+						"v1",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://postman-echo.com"
+		}
+	]
+}
