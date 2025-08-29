@@ -22,7 +22,7 @@ SUBTOTAL = 1000
 **
 ---
 ## Pasos realizados
-- Se crea el workspace en Postman
+- Se crea el workspace en Postman: postman/Kushki.postman_collection.json
 - Se crean las solicitudes:
 
 ---
@@ -130,3 +130,4 @@ curl --location --request GET 'https://api-uat.kushkipagos.com/analytics/v2/tran
 }'
 
 Evidencia: postman/responses/transactions_list.json
+
