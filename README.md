@@ -82,8 +82,8 @@ La etapa II consistió en consumir los endpoints de cargos, anulaciones y consul
 
 Toda la evidencia se encuentra: 
 
-Documentación: docs/PROCESSING_API.md
-Requests/responses: postman/
+- Documentación: docs/PROCESSING_API.md
+- Requests/responses: postman/
 
 
 - Herramienta: Postman (colección incluida en /postman/").
