@@ -1,7 +1,5 @@
 <?php
 
-<?php
-
 // Configuración Kushki (UAT)
 $merchantId = "2baadccc013e448cbb10487f92a18818"; 
 $kushkiUrl  = "https://api-uat.kushkipagos.com/card/v1/charges";
@@ -73,6 +71,7 @@ if ($httpCode >= 200 && $httpCode < 300 && isset($data['ticketNumber'])) {
     echo "<pre>" . htmlspecialchars($response) . "</pre>";
 }
 ?>
+
 
 
 
