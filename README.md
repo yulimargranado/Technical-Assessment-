@@ -74,4 +74,23 @@ Ruta: Configuración → Integraciones → Kajita → Crear nuevo formulario
 
 <img width="1918" height="812" alt="9" src="https://github.com/user-attachments/assets/14eda954-d96a-4849-9373-bc309cd93b84" />
 
+---
+
+### Etapa II — Procesamiento API (resumen)
+
+La etapa II consistió en consumir los endpoints de cargos, anulaciones y consultas de Kushki usando Postman, a partir del token generado en la etapa 1 donde se simulo un pago con Kajita.
+
+Toda la evidencia se encuentra: 
+
+Documentación: docs/PROCESSING_API.md
+Requests/responses: postman/
+
+
+- Herramienta: Postman (colección incluida en /postman/").
+- **Flujo ejecutado:**
+  1. Cargo (`POST /card/v1/charges`).
+  2. Anulación (`DELETE /v1/charges/{ticketNumber}`).
+  3. Consulta de transacciones (`POST /analytics/v2/transactions-list`).
+
+---
 
