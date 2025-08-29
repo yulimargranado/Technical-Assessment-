@@ -75,10 +75,11 @@
             // submit real
             document.getElementById('my-form').submit();
           } else {
-            // mostrar error al usuario
+            /** mostrar error al usuario
             var msg = (response && response.message) ? response.message : 'No se pudo obtener token';
             alert('Error al tokenizar: ' + msg);
-            console.error('Kushki token error', response);
+            console.error('Kushki token error', response);**/
+            alert('Error al generar token: ' + (response.message || 'Desconocido'));
           }
         });
     });
